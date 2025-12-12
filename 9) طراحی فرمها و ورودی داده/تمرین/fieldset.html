@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>All Inputs & Textarea</title>
+</head>
+
+<body>
+
+    <form style="width: 400px; font-family: sans-serif;">
+
+        <!-- بخش 1: اطلاعات شخصی -->
+        <fieldset style="padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+            <legend style="padding: 0 10px; font-weight: bold;">اطلاعات شخصی</legend>
+
+            <p>
+                <label>نام کامل:</label><br>
+                <input type="text" placeholder="مثال: محمد فخرآوری" style="width: 100%;">
+            </p>
+
+            <p>
+                <label>ایمیل:</label><br>
+                <input type="email" placeholder="example@mail.com" style="width: 100%;">
+            </p>
+
+            <p>
+                <label>شماره موبایل:</label><br>
+                <input type="tel" pattern="09[0-9]{9}" placeholder="09121234567" style="width: 100%;">
+            </p>
+        </fieldset>
+
+
+        <!-- بخش 2: اطلاعات ورود -->
+        <fieldset style="padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+            <legend style="padding: 0 10px; font-weight: bold;">اطلاعات ورود</legend>
+
+            <p>
+                <label>نام کاربری:</label><br>
+                <input type="text" placeholder="username" style="width: 100%;">
+            </p>
+
+            <p>
+                <label>رمز عبور:</label><br>
+                <input type="password" minlength="6" placeholder="حداقل 6 کاراکتر" style="width: 100%;">
+            </p>
+
+            <p>
+                <label>تکرار رمز عبور:</label><br>
+                <input type="password" minlength="6" placeholder="مجدد رمز عبور را وارد کنید" style="width: 100%;">
+            </p>
+        </fieldset>
+
+
+        <!-- بخش 3: تنظیمات و انتخاب‌ها -->
+        <fieldset style="padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+            <legend style="padding: 0 10px; font-weight: bold;">تنظیمات و انتخاب‌ها</legend>
+
+            <p>
+                <label>جنسیت:</label><br>
+                <input type="radio" name="gender" value="male"> مرد
+                <input type="radio" name="gender" value="female"> زن
+            </p>
+
+            <p>
+                <label>علاقه‌مندی‌ها:</label><br>
+                <input type="checkbox" value="tech"> تکنولوژی<br>
+                <input type="checkbox" value="music"> موسیقی<br>
+                <input type="checkbox" value="sport"> ورزش
+            </p>
+
+            <p>
+                <label>کشور:</label><br>
+                <select style="width: 100%;">
+                    <option>ایران</option>
+                    <option>آلمان</option>
+                    <option>فرانسه</option>
+                    <option>ترکیه</option>
+                </select>
+            </p>
+
+        </fieldset>
+
+
+        <!-- دکمه ارسال -->
+        <p>
+            <button type="submit" style="width: 100%; padding: 10px; font-size: 16px;">ارسال فرم</button>
+        </p>
+
+    </form>
+
+
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      summary,ul,li {
+        list-style: none !important;
+      }
+      .mobile {
+        display: block;
+      }
+
+      .desktop {
+        display: none;
+      }
+
+      @media (min-width: 450px) {
+        .mobile {
+          display: none;
+        }
+
+        .desktop {
+          display: flex;
+          gap: 20px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- موبایل -->
+    <details class="mobile">
+      <summary>☰</summary>
+      <ul>
+        <li>🏠 خانه</li>
+        <li>ℹ️ درباره</li>
+        <li>📞 تماس</li>
+        <li>🛠️ خدمات</li>
+      </ul>
+    </details>
+
+    <!-- دسکتاپ -->
+    <ul class="desktop">
+      <li>🏠 خانه</li>
+      <li>ℹ️ درباره</li>
+      <li>📞 تماس</li>
+      <li>🛠️ خدمات</li>
+    </ul>
+  </body>
+</html>

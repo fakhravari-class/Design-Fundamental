@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Video Event</title>
+
+  <style>
+    body {
+      font-family: "Vazirmatn", sans-serif;
+      background: linear-gradient(135deg, #ffdee9, #b5fffc);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'><text x='0' y='24' font-size='24'>❤️</text></svg>"), auto;
+    }
+
+    .card {
+      background: linear-gradient(135deg, #ffffff, #fff6f9);
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(255, 0, 128, 0.15);
+      border: 1px solid #ffe0ef;
+    }
+
+    .love-text {
+      background: #fff0f6;
+      border-radius: 12px;
+      padding: 15px;
+      text-align: center;
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      border: 1px solid #ffc8dd;
+      color: #c9184a;
+      font-weight: 600;
+    }
+
+    video {
+      width: 100%;
+      margin-bottom: 15px;
+      border-radius: 10px;
+    }
+
+    .info-box {
+      background: #ffffff;
+      padding: 12px 15px;
+      border-radius: 12px;
+      border: 1px solid #f3d1e0;
+      margin-top: 10px;
+      font-size: 15px;
+      color: #4b4453;
+    }
+
+    .label {
+      font-weight: bold;
+      color: #ff006e;
+    }
+
+    .value {
+      color: #5a189a;
+    }
+  </style>
+  <style>
+    .heart-drop {
+      position: fixed;
+      top: -20px;
+      font-size: 22px;
+      color: red;
+      animation: fall linear forwards;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    @keyframes fall {
+      from {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      to {
+        transform: translateY(120vh);
+        opacity: 0.7;
+      }
+    }
+  </style>
+
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="card">
+    <video poster="https://rozmusic.com/wp-content/uploads/2025/11/Mehdi-Darabi-Zakhme-Kari-Live.jpg" id="vid" controls>
+      <source
+        src="https://dl.rozmusic.com/Music/1404/08/20/Mehdi%20Darabi%20-%20Zakhme%20Kari%20%28Live%29%20480p_RozMusic.mp4"
+        type="video/mp4" />
+    </video>
+
+    <div class="love-text">
+      «هر بار که صدای این آهنگ پخش می‌شود یک‌بار دیگر یادم می‌افتد چقدر دوستت
+      دارم…»
+    </div>
+
+    <div class="info-box">
+      <div>
+        <span class="label">رویداد: </span>
+        <span id="ev" class="value">—</span>
+      </div>
+      <div>
+        <span class="label">ثانیه: </span><span id="sec" class="value">0</span>
+      </div>
+      <div>
+        <span class="label">دقیقه:ثانیه: </span><span id="minsec" class="value">0:00</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var v = document.getElementById("vid");
+    var ev = document.getElementById("ev");
+    var sec = document.getElementById("sec");
+    var minsec = document.getElementById("minsec");
+
+    function format(t) {
+      var m = Math.floor(t / 60);
+      var s = Math.floor(t % 60)
+        .toString()
+        .padStart(2, "0");
+      return m + ":" + s;
+    }
+
+    v.onplay = function () {
+      ev.textContent = "در حال پخش";
+    };
+
+    v.onpause = function () {
+      ev.textContent = "مکث";
+    };
+
+    v.onended = function () {
+      ev.textContent = "اتمام";
+    };
+
+    v.ontimeupdate = function () {
+      sec.textContent = Math.floor(v.currentTime);
+      minsec.textContent = format(v.currentTime);
+    };
+
+    // افکت بارش قلب
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.className = "heart-drop";
+      heart.textContent = "❤️";
+
+      heart.style.left = Math.random() * window.innerWidth + "px";
+
+      let size = 18 + Math.random() * 12;
+      heart.style.fontSize = size + "px";
+
+      let duration = 1.5 + Math.random() * 2;
+      heart.style.animationDuration = duration + "s";
+
+      document.body.appendChild(heart);
+
+      setTimeout(() => heart.remove(), duration * 1000);
+    }
+
+    setInterval(createHeart, 150);
+  </script>
+</body>
+
+</html>

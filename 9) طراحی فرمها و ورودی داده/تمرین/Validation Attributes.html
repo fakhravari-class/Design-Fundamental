@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>All Inputs & Textarea</title>
+</head>
+
+<body>
+
+    <h2>انواع ورودی‌ها همراه با Validation Attributes</h2>
+
+    <form>
+
+        <!-- TEXT -->
+        <p>
+            <label>Text (maxlength + minlength + pattern + autocomplete):</label>
+            <input type="text" minlength="3" maxlength="20" pattern="[A-Za-z ]{3,20}" autocomplete="off"
+                placeholder="نام انگلیسی فقط (۳ تا ۲۰ حرف)">
+        </p>
+
+        <!-- PASSWORD -->
+        <p>
+            <label>Password (minlength + maxlength + pattern):</label>
+            <input type="password" minlength="6" maxlength="20" pattern="[A-Za-z0-9]{6,20}"
+                placeholder="رمز عبور ۶ تا ۲۰ کاراکتر">
+        </p>
+
+        <!-- EMAIL -->
+        <p>
+            <label>Email (maxlength + autocomplete):</label>
+            <input type="email" maxlength="40" autocomplete="on" placeholder="example@mail.com">
+        </p>
+
+        <!-- NUMBER -->
+        <p>
+            <label>Number (min + max + step):</label>
+            <input type="number" min="1" max="100" step="1" placeholder="بین 1 تا 100">
+        </p>
+
+        <!-- TEL -->
+        <p>
+            <label>Tel (pattern + minlength + maxlength):</label>
+            <input type="tel" minlength="11" maxlength="11" pattern="09[0-9]{9}" placeholder="09121234567">
+        </p>
+
+        <!-- URL -->
+        <p>
+            <label>URL (autocomplete):</label>
+            <input type="url" autocomplete="on" placeholder="https://example.com">
+        </p>
+
+        <!-- SEARCH -->
+        <p>
+            <label>Search (maxlength + autocomplete):</label>
+            <input type="search" maxlength="30" autocomplete="off" placeholder="جستجو...">
+        </p>
+
+        <!-- FILE -->
+        <p>
+            <label>File (accept – فقط عکس یا PDF):</label>
+            <input type="file" accept=".jpg,.png,.pdf">
+        </p>
+
+        <!-- DATE -->
+        <p>
+            <label>Date (min + max):</label>
+            <input type="date" min="2025-12-01" max="2025-12-07">
+        </p>
+
+        <!-- DATETIME LOCAL -->
+        <p>
+            <label>Datetime-local (min + max):</label>
+            <input type="datetime-local" min="2025-12-01T00:00" max="2025-12-07T23:59">
+        </p>
+
+        <!-- TIME -->
+        <p>
+            <label>Time (min + max + step):</label>
+            <input type="time" min="08:00" max="18:00" step="60">
+        </p>
+
+        <!-- MONTH -->
+        <p>
+            <label>Month (min + max):</label>
+            <input type="month" min="2025-01" max="2025-12">
+        </p>
+
+        <!-- WEEK -->
+        <p>
+            <label>Week (min + max):</label>
+            <input type="week" min="2025-W01" max="2025-W52">
+        </p>
+
+        <!-- COLOR -->
+        <p>
+            <label>Color:</label>
+            <input type="color" value="#0074e0">
+        </p>
+
+        <!-- RANGE -->
+        <p>
+            <label>Range (min + max + step):</label>
+            <input type="range" min="0" max="100" step="5" value="90">
+        </p>
+
+        <!-- RADIO -->
+        <p>
+            <label>Radio (required):</label><br>
+            <input type="radio" name="gender" value="male"> مرد<br>
+            <input type="radio" name="gender" value="female"> زن
+        </p>
+
+        <!-- CHECKBOX -->
+        <p>
+            <label>Checkbox:</label><br>
+            <input type="checkbox" value="music"> موسیقی<br>
+            <input type="checkbox" value="sport"> ورزش
+        </p>
+
+        <!-- HIDDEN -->
+        <p>
+            <label>Hidden:</label>
+            <input type="hidden" value="12345">
+        </p>
+
+        <!-- BUTTON -->
+        <p>
+            <label>Button:</label>
+            <input type="button" value="کلیک کن">
+        </p>
+
+        <!-- SUBMIT -->
+        <p>
+            <label>Submit:</label>
+            <input type="submit" value="ارسال">
+        </p>
+
+        <!-- RESET -->
+        <p>
+            <label>Reset:</label>
+            <input type="reset" value="بازنشانی فرم">
+        </p>
+
+        <!-- TEXTAREA -->
+        <p>
+            <label>Textarea (maxlength + rows + cols):</label>
+            <textarea rows="5" cols="40" maxlength="200" placeholder="حداکثر 200 کاراکتر بنویسید..."></textarea>
+        </p>
+
+    </form>
+
+</body>
+
+</html>

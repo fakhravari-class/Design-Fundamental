@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>فرم نمونه</title>
+
+    <style>
+        body {
+            font-family: sans-serif;
+            background: #f7f7f7;
+            padding: 30px;
+        }
+
+        form {
+            background: #fff;
+            padding: 25px;
+            width: 350px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #bbb;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-left: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056d6;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="save.php" method="post">
+
+        <label>نام:</label>
+        <input type="text" name="fullname" required>
+
+        <label>ایمیل:</label>
+        <input type="email" name="email" required>
+
+        <label>رمز عبور:</label>
+        <input type="password" name="password">
+
+        <label>جنسیت:</label>
+        <input type="radio" name="gender" value="male"> مرد
+        <input type="radio" name="gender" value="female"> زن
+        <br><br>
+
+        <label>علاقه‌مندی‌ها:</label>
+        <input type="checkbox" name="interests[]" value="sport"> ورزش
+        <input type="checkbox" name="interests[]" value="music"> موسیقی
+        <input type="checkbox" name="interests[]" value="tech"> تکنولوژی
+        <br><br>
+
+        <label>کشور:</label>
+        <select name="country" required>
+            <option value="ir">ایران</option>
+            <option value="de">آلمان</option>
+            <option value="us">آمریکا</option>
+        </select>
+
+        <label>توضیحات:</label>
+        <textarea name="message" rows="4"></textarea>
+
+        <button type="submit">ارسال</button>
+
+    </form>
+
+</body>
+
+</html>
