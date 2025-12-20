@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Landing Page Example</title>
+    <style>
+        * {
+            font-family: 'Vazir FD-WOL';
+        }
+
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            line-height: 1.8;
+
+        }
+
+        /* نوار بالا */
+        nav {
+            height: 10vh;
+            padding: 0 5vw;
+            background: #222;
+            color: white;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* بخش Hero */
+        .hero {
+            height: 90vh;
+            padding: 0 10vw;
+            background: linear-gradient(135deg, #4a90e2, #9013fe);
+            color: white;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hero p {
+            max-width: 600px;
+        }
+
+        /* دکمه */
+        button {
+            width: 18vw;
+            min-width: 160px;
+            padding: 12px;
+            margin-top: 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        /* بخش محتوا */
+        .content {
+            padding: 8vh 10vw;
+            background: #f5f5f5;
+        }
+    </style>
+</head>
+
+<body dir="rtl">
+
+    <!-- نوار بالا -->
+    <nav>
+        <strong>LOGO</strong>
+        <span>خانه | خدمات | تماس</span>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>طراحی مدرن وب</h1>
+        <p>
+            با استفاده از واحدهای vw و vh می‌توان رابط‌هایی ساخت که
+            دقیقاً متناسب با اندازه صفحه کاربر باشند، بدون وابستگی به محتوا.
+        </p>
+        <button>شروع یادگیری</button>
+    </section>
+
+    <!-- بخش محتوا -->
+    <section class="content">
+        <h2>چرا vw و vh مهم هستند؟</h2>
+        <p>
+            در طراحی وب مدرن، اجزای اصلی صفحه باید با اندازه صفحه هماهنگ باشند.
+            واحدهای نسبی vw و vh این امکان را می‌دهند که ارتفاع و عرض بخش‌ها
+            همیشه متناسب با صفحه نمایش کاربر تنظیم شوند.
+        </p>
+    </section>
+
+</body>
+
+</html>
