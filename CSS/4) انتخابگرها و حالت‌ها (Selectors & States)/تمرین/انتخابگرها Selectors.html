@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Selectors – مثال عملی</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            direction: rtl;
+            padding: 40px;
+            background: #fafafa;
+        }
+
+        h2 {
+            margin-top: 50px;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+        }
+
+        /* 1️⃣ Tag Selector */
+        p {
+            color: blue;
+        }
+
+        /* 2️⃣ Class Selector */
+        .highlight {
+            background: yellow;
+        }
+
+        /* 3️⃣ ID Selector */
+        #unique {
+            border: 2px solid red;
+            padding: 10px;
+        }
+
+        /* 4️⃣ Combinator (descendant) */
+        .box p {
+            color: green;
+        }
+
+        /* 5️⃣ Child Selector */
+        .parent>p {
+            font-weight: bold;
+        }
+
+        /* 6️⃣ Adjacent sibling */
+        h3+p {
+            background: #c8e6c9;
+        }
+
+        /* 7️⃣ General sibling */
+        h4~p {
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🎯 مثال عملی CSS Selectors</h1>
+
+    <!-- 1. Tag Selector -->
+    <h2>1️⃣ Tag Selector (p)</h2>
+    <p>این پاراگراف با Tag Selector آبی شده</p>
+    <p>این هم آبی است</p>
+
+    <!-- 2. Class Selector -->
+    <h2>2️⃣ Class Selector (.highlight)</h2>
+    <p class="highlight">این پاراگراف کلاس highlight دارد</p>
+    <p>این ندارد</p>
+
+    <!-- 3. ID Selector -->
+    <h2>3️⃣ ID Selector (#unique)</h2>
+    <div id="unique">
+        این div شناسه یکتا دارد
+    </div>
+
+    <!-- 4. Descendant Selector -->
+    <h2>4️⃣ Combinator (عنصر درون عنصر)</h2>
+    <div class="box" style="border:1px solid #999; padding:10px;">
+        <p>این p داخل .box است (سبز)</p>
+        <div>
+            <p>این هم داخل .box است (هر عمقی)</p>
+        </div>
+    </div>
+    <p>این p بیرون box است (آبی)</p>
+
+    <!-- 5. Child Selector -->
+    <h2>5️⃣ Child Selector (فرزند مستقیم)</h2>
+    <div class="parent" style="border:1px solid #999; padding:10px;">
+        <p>فرزند مستقیم (bold)</p>
+        <div>
+            <p>نوه است (bold نیست)</p>
+        </div>
+    </div>
+
+    <!-- 6. Adjacent Sibling -->
+    <h2>6️⃣ Adjacent Sibling (+)</h2>
+    <h3>عنوان</h3>
+    <p>فقط من بعد از h3 هستم (سبز روشن)</p>
+    <p>من انتخاب نشدم</p>
+
+    <!-- 7. General Sibling -->
+    <h2>7️⃣ General Sibling (~)</h2>
+    <h4>عنوان</h4>
+    <p>من بعد از h4 هستم (بنفش)</p>
+    <p>من هم بعد از h4 هستم (بنفش)</p>
+    <div>من p نیستم</div>
+    <p>من هم بنفشم</p>
+
+</body>
+</html>

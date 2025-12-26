@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <title>border vs outline (با و بدون hover)</title>
+
+    <style>
+        body {
+            font-family: sans-serif;
+            direction: rtl;
+            padding: 40px;
+            background: #fafafa;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            margin-top: 40px;
+        }
+
+        .row {
+            display: flex;
+            gap: 40px;
+        }
+
+        .box {
+            width: 220px;
+            padding: 20px;
+            text-align: center;
+            background: #f0f0f0;
+            transition: all 0.3s ease;
+        }
+
+        /* ===== بدون hover ===== */
+        .border-normal {
+            border: 6px solid #1976d2;
+            outline: 2px solid #d32f2f;
+        }
+
+        .outline-normal {
+            outline: 6px solid #d32f2f;
+            border: 2px solid #1976d2;
+        }
+
+        /* ===== با hover ===== */
+        .border-hover {
+            border: 6px solid #1976d2;
+        }
+
+        .border-hover:hover {
+            border-width: 16px;
+        }
+
+        .outline-hover {
+            outline: 6px solid #d32f2f;
+        }
+
+        .outline-hover:hover {
+            outline-width: 16px;
+        }
+
+        .label {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>تفاوت border و outline</h2>
+
+    <!-- حالت عادی -->
+    <h3>۱) بدون hover (حالت ثابت)</h3>
+    <div class="row">
+        <div>
+            <div class="box border-normal">
+                border
+            </div>
+            <div class="label">جزو اندازه عنصر</div>
+        </div>
+
+        <div>
+            <div class="box outline-normal">
+                outline
+            </div>
+            <div class="label">بیرون از عنصر</div>
+        </div>
+    </div>
+
+    <!-- حالت hover -->
+    <h3>۲) با hover (تعامل کاربر)</h3>
+    <div class="row">
+        <div>
+            <div class="box border-hover">
+                border <br>
+                (هاور کن)
+            </div>
+            <div class="label">layout تغییر می‌کند ❌</div>
+        </div>
+
+        <div>
+            <div class="box outline-hover">
+                outline <br>
+                (هاور کن)
+            </div>
+            <div class="label">layout ثابت می‌ماند ✅</div>
+        </div>
+    </div>
+
+</body>
+
+</html>

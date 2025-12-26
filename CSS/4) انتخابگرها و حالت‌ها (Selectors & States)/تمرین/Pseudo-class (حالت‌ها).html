@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pseudo-class مثال عملی</title>
+
+    <style>
+        body {
+            font-family: sans-serif;
+            direction: rtl;
+            padding: 40px;
+            background: #fafafa;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            background: #1976d2;
+            color: white;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        /* hover */
+        button:hover {
+            background: greenyellow;
+            color: blue;
+        }
+
+        /* focus */
+        input:focus {
+            outline: 3px solid orange;
+        }
+
+        /* nth-child */
+        li:nth-child(3) {
+            background: orangered;
+            font-weight: bold;
+            padding: 5px;
+        }
+
+        /* not */
+        p:not(.important) {
+            color: gray;
+        }
+
+        /* has */
+        .card:has(button) {
+            border: 2px solid red;
+        }
+
+        /* is */
+        :is(h2, h3) {
+            color: purple;
+        }
+
+        .card {
+            padding: 15px;
+            margin-top: 20px;
+            border: 2px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>عنوان h2</h2>
+    <h3>عنوان h3</h3>
+
+    <button>hover منو ببین</button>
+
+    <br><br>
+
+    <input type="text" placeholder="کلیک کن (focus)">
+
+    <h3>لیست (nth-child)</h3>
+    <ul>
+        <li>آیتم اول</li>
+        <li>آیتم دوم (سبز)</li>
+        <li>آیتم سوم</li>
+    </ul>
+
+    <h3>not()</h3>
+    <p class="important">این مهم است</p>
+    <p>این مهم نیست (خاکستری)</p>
+
+    <h3>has()</h3>
+    <div class="card">
+        کارت بدون دکمه
+    </div>
+
+    <div class="card">
+        کارت با دکمه
+        <button>داخل کارت</button>
+    </div>
+
+</body>
+
+</html>
