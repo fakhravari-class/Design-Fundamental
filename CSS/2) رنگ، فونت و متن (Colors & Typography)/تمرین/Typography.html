@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Typography – Long Text Demo</title>
+
+    <style>
+        body {
+            font-family: "Segoe UI", Tahoma, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #1e293b;
+            margin: 40px;
+            direction: rtl;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin: 50px 0 20px;
+        }
+
+        p {
+            margin-bottom: 18px;
+            text-align: justify;
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        .family {
+            font-family: "Inter", Arial, sans-serif;
+        }
+
+        .size {
+            font-size: 22px;
+        }
+
+        .weight {
+            font-weight: 700;
+        }
+
+        .style {
+            font-style: oblique 10deg;
+        }
+
+        .stretch {
+            font-stretch: 105%;
+        }
+
+        .line {
+            line-height: 2.3;
+        }
+
+        .ligatures {
+            font-variant-ligatures: common-ligatures no-discretionary-ligatures;
+        }
+
+        .caps {
+            font-variant-caps: all-small-caps;
+        }
+
+        .numeric {
+            font-variant-numeric: tabular-nums lining-nums;
+        }
+
+        .kerning {
+            font-kerning: normal;
+        }
+
+        .adjust {
+            font-size-adjust: 0.52;
+        }
+
+        .align {
+            text-align: center;
+        }
+
+        .indent {
+            text-indent: 2rem;
+        }
+
+        .transform {
+            text-transform: uppercase;
+        }
+
+        .letter {
+            letter-spacing: 0.12em;
+        }
+
+        .word {
+            word-spacing: 0.3em;
+        }
+
+        .decorate {
+            text-decoration: underline;
+            text-decoration-color: red;
+            text-decoration-style: wavy;
+            text-decoration-thickness: 2px;
+        }
+
+        .shadow {
+            text-shadow: 0 2px 6px rgba(0, 0, 0, .3);
+        }
+
+        .nowrap {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            border: 1px solid #cbd5e1;
+            padding: 10px;
+        }
+
+        .wrap {
+            overflow-wrap: break-word;
+            border: 1px solid #cbd5e1;
+            padding: 10px;
+        }
+
+        .break {
+            word-break: break-all;
+            border: 1px solid #cbd5e1;
+            padding: 10px;
+        }
+
+        .hyphens {
+            hyphens: auto;
+            border: 1px solid #cbd5e1;
+            padding: 10px;
+        }
+
+        .noselect {
+            user-select: none;
+            background: #f1f5f9;
+            padding: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            caret-color: blue;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>بررسی کامل Typography در طراحی وب</h1>
+
+    <section>
+        <h2>مقدمه</h2>
+
+        <p>
+            تایپوگرافی یکی از مهم‌ترین پایه‌های طراحی رابط کاربری و طراحی وب به شمار می‌رود.
+            نحوه نمایش متن می‌تواند تأثیر مستقیمی بر میزان درک محتوا، سرعت خواندن و تجربه کلی
+            کاربر داشته باشد. در صفحات متنی طولانی، تنظیم صحیح تایپوگرافی اهمیت دوچندان پیدا می‌کند.
+        </p>
+
+        <p class="indent">
+            استفاده از فونت مناسب، فاصله خطوط استاندارد و اندازه قلم درست باعث می‌شود که
+            چشم کاربر کمتر خسته شود و بتواند برای مدت زمان بیشتری متن را دنبال کند.
+            این موضوع به‌ویژه در مقالات آموزشی، کتاب‌های الکترونیکی و مستندات فنی اهمیت دارد.
+        </p>
+    </section>
+
+    <section>
+        <h2>Font Properties</h2>
+
+        <p class="family">
+            font-family باعث می‌شود این متن با فونتی متفاوت از متن عادی نمایش داده شود.
+            تغییر فونت می‌تواند حس رسمی، دوستانه یا مدرن بودن محتوا را به کاربر منتقل کند.
+        </p>
+
+        <p class="size">
+            font-size در این پاراگراف افزایش یافته است تا تفاوت اندازه متن به وضوح مشخص باشد
+            و بتوان تأثیر آن را در متن‌های طولانی‌تر مشاهده کرد.
+        </p>
+
+        <p class="weight">
+            font-weight ضخامت حروف را افزایش داده است و این متن برای تأکید یا تیترهای مهم
+            مناسب‌تر به نظر می‌رسد.
+        </p>
+
+        <p class="style">
+            font-style این متن را مورب کرده است که معمولاً برای نقل‌قول‌ها یا توضیحات جانبی
+            استفاده می‌شود.
+        </p>
+
+        <p class="stretch">
+            font-stretch عرض حروف را کمی تغییر داده است و در فونت‌های متغیر این تفاوت
+            ملموس‌تر دیده می‌شود.
+        </p>
+
+        <p class="line">
+            line-height فاصله بین خطوط را افزایش داده است.<br>
+            این خط دوم برای مقایسه فاصله خطوط نوشته شده است.<br>
+            در متن‌های بلند، line-height مناسب باعث خوانایی بهتر می‌شود.
+        </p>
+
+        <p class="ligatures">
+            font-variant-ligatures در این متن فعال است و در کلمات انگلیسی مانند office،
+            affine و file می‌توان اتصال نرم‌تر حروف را مشاهده کرد.
+        </p>
+
+        <p class="caps">
+            font-variant-caps تمام حروف این متن انگلیسی را به شکل small caps نمایش می‌دهد
+            و ظاهری رسمی‌تر ایجاد می‌کند.
+        </p>
+
+        <p class="numeric">
+            font-variant-numeric باعث نمایش یکنواخت اعداد شده است:
+            1111 2222 3333 4444 5555
+        </p>
+
+        <p class="kerning">
+            font-kerning فاصله بین حروف خاصی مانند AV، WA و To را اصلاح می‌کند
+            تا متن طبیعی‌تر دیده شود.
+        </p>
+
+        <p class="adjust">
+            font-size-adjust تلاش می‌کند خوانایی متن را حتی هنگام تغییر فونت حفظ کند
+            و ارتفاع حروف کوچک را متعادل نگه دارد.
+        </p>
+    </section>
+
+    <section>
+        <h2>Text Properties</h2>
+
+        <p class="align">
+            text-align این پاراگراف را وسط‌چین کرده است و بیشتر برای تیترها یا متن‌های کوتاه
+            کاربرد دارد.
+        </p>
+
+        <p class="transform">
+            this paragraph uses text transform to show uppercase text clearly.
+        </p>
+
+        <p class="letter">
+            letter-spacing فاصله بین حروف را افزایش داده است و باعث می‌شود متن بازتر
+            و رسمی‌تر دیده شود.
+        </p>
+
+        <p class="word">
+            word-spacing فاصله بین کلمات را بیشتر کرده است که در بعضی سبک‌های طراحی
+            مورد استفاده قرار می‌گیرد.
+        </p>
+
+        <p class="decorate">
+            text-decoration یک خط تزئینی موج‌دار با رنگ متفاوت زیر متن ایجاد کرده است
+            که معمولاً برای لینک‌ها یا تأکید بصری به کار می‌رود.
+        </p>
+
+        <p class="shadow">
+            text-shadow سایه‌ای ملایم به متن داده است تا آن را از پس‌زمینه متمایز کند.
+        </p>
+
+        <div class="nowrap">
+            white-space و text-overflow باعث شده‌اند این متن بسیار بسیار بسیار طولانی
+            در یک خط باقی بماند و در انتها با سه نقطه قطع شود
+        </div>
+    </section>
+
+    <section>
+        <h2>Advanced Text Properties</h2>
+
+        <p class="wrap">
+            overflow-wrap این امکان را می‌دهد که لینک‌های طولانی مانند
+            https://example.com/this-is-a-very-very-long-url-without-spaces
+            به‌درستی شکسته شوند.
+        </p>
+
+        <p class="break">
+            word-break این متن بدون توجه به ساختار کلمه شکسته می‌شود:
+            ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ
+        </p>
+
+        <p class="hyphens" lang="en">
+            hyphens allows automatic hyphenation for very long English words
+            such as antidisestablishmentarianism in supported languages.
+        </p>
+
+        <p class="noselect">
+            user-select باعث شده این متن قابل انتخاب نباشد و کاربر نتواند آن را کپی کند.
+        </p>
+
+        <input type="text" placeholder="caret-color → مکان‌نما آبی است">
+    </section>
+
+</body>
+
+</html>

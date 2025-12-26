@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Gradients – Complete Examples</title>
+
+    <style>
+        body {
+            font-family: 'Vazir FD-WOL', Tahoma;
+            padding: 20px;
+            background: #f2f2f2;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            margin: 50px 0 15px;
+            padding-right: 12px;
+            border-right: 6px solid #444;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .box {
+            height: 140px;
+            border-radius: 12px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-weight: bold;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Gradients</h1>
+
+    <!-- ================================================= -->
+    <h2>Linear Gradient (خطی)</h2>
+    <div class="grid">
+        <div class="box" style="background:linear-gradient(to right, red, blue);">to right</div>
+        <div class="box" style="background:linear-gradient(to left, green, yellow);">to left</div>
+        <div class="box" style="background:linear-gradient(to bottom, orange, purple);">to bottom</div>
+
+        <div class="box" style="background:linear-gradient(45deg, red, blue);">45deg</div>
+        <div class="box" style="background:linear-gradient(90deg, red, blue);">90deg</div>
+        <div class="box" style="background:linear-gradient(135deg, red, blue);">135deg</div>
+
+        <div class="box" style="background:linear-gradient(to right, red, yellow, green);">3 colors</div>
+        <div class="box" style="background:linear-gradient(to bottom, purple, pink, orange);">multi color</div>
+
+        <div class="box" style="background:linear-gradient(to right, red 30%, blue 70%);">percentage</div>
+        <div class="box" style="background:linear-gradient(to right, red 50%, blue 50%);">hard split</div>
+
+        <div class="box" style="background:linear-gradient(to right, #667eea, #764ba2);">button style</div>
+        <div class="box" style="background:linear-gradient(to bottom, #232526, #414345);">dark UI</div>
+    </div>
+
+    <!-- ================================================= -->
+    <h2>Repeating Linear Gradient (تکرارشونده)</h2>
+    <div class="grid">
+        <div class="box" style="
+        background: repeating-linear-gradient(
+            to right,
+            red 0,
+            red 20px,
+            blue 20px,
+            blue 40px
+        );">stripes</div>
+
+        <div class="box" style="
+        background: repeating-linear-gradient(
+            45deg,
+            yellow 0,
+            yellow 10px,
+            black 10px,
+            black 20px
+        );">warning</div>
+
+        <div class="box" style="
+        background: repeating-linear-gradient(
+            to right,
+            red 0%,
+            red 25%,
+            blue 25%,
+            blue 50%
+        );">percentage repeat</div>
+
+        <div class="box" style="
+        background: repeating-linear-gradient(
+            to bottom,
+            rgba(255,255,255,.4),
+            rgba(255,255,255,.4) 2px,
+            transparent 2px,
+            transparent 6px
+        );">line pattern</div>
+
+        <div class="box" style="
+        background: repeating-linear-gradient(
+            90deg,
+            #667eea 0,
+            #667eea 15px,
+            #764ba2 15px,
+            #764ba2 30px
+        );">UI pattern</div>
+    </div>
+
+    <!-- ================================================= -->
+    <h2>Radial Gradient (دایره‌ای)</h2>
+    <div class="grid">
+
+        <!-- Shape -->
+        <div class="box" style="background:radial-gradient(circle, red, blue);">
+            shape: circle
+        </div>
+
+        <div class="box" style="background:radial-gradient(ellipse, red, blue);">
+            shape: ellipse
+        </div>
+
+        <!-- Position -->
+        <div class="box" style="background:radial-gradient(circle at center, red, blue);">
+            position: center
+        </div>
+
+        <div class="box" style="background:radial-gradient(circle at top, red, blue);">
+            position: top
+        </div>
+
+        <div class="box" style="background:radial-gradient(circle at bottom right, red, blue);">
+            position: bottom right
+        </div>
+
+        <div class="box" style="background:radial-gradient(circle at 30% 40%, red, blue);">
+            position: 30% 40%
+        </div>
+
+        <!-- Size -->
+        <div class="box" style="background:radial-gradient(circle closest-side, red, blue);">
+            size: closest-side
+        </div>
+
+        <div class="box" style="background:radial-gradient(circle farthest-side, red, blue);">
+            size: farthest-side
+        </div>
+
+        <div class="box" style="background:radial-gradient(circle closest-corner, red, blue);">
+            size: closest-corner
+        </div>
+
+        <div class="box" style="background:radial-gradient(circle farthest-corner, red, blue);">
+            size: farthest-corner
+        </div>
+
+        <!-- Color Stop -->
+        <div class="box" style="background:radial-gradient(circle, red 30%, blue 70%);">
+            color stop %
+        </div>
+
+        <div class="box" style="background:radial-gradient(circle, red 40px, blue 120px);">
+            color stop px
+        </div>
+
+        <div class="box" style="background:radial-gradient(circle, red 0%, orange 50%, blue 100%);">
+            multi color stop
+        </div>
+
+    </div>
+
+    <!-- ================================================= -->
+    <h2>Conic Gradient (چرخشی)</h2>
+    <div class="grid">
+        <div class="box" style="background:conic-gradient(red, yellow, green, blue, red);">
+            color wheel
+        </div>
+
+        <div class="box" style="background:conic-gradient(from 90deg, #ff416c, #ff4b2b, #ff416c);">
+            rotated start
+        </div>
+
+        <div class="box" style="background:conic-gradient(
+        red 0deg,
+        red 120deg,
+        white 120deg,
+        white 240deg,
+        blue 240deg
+    );">
+            hard stop
+        </div>
+
+        <div class="box" style="background:conic-gradient(
+        #667eea 0%,
+        #667eea 25%,
+        #764ba2 25%,
+        #764ba2 50%,
+        #667eea 50%,
+        #667eea 100%
+    );">
+            pie style
+        </div>
+
+        <div class="box" style="background:conic-gradient(
+        green 0deg,
+        green 270deg,
+        #ccc 270deg
+    );">
+            progress 75%
+        </div>
+
+        <div class="box" style="background:conic-gradient(
+        transparent 0deg,
+        #ff5722 180deg,
+        transparent 360deg
+    );">
+            semi circle
+        </div>
+    </div>
+
+</body>
+
+</html>

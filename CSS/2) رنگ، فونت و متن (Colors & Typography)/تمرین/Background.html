@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Backgrounds Demo</title>
+
+    <style>
+        body {
+            font-family: "Segoe UI", Tahoma, sans-serif;
+            font-size: 16px;
+            line-height: 1.8;
+            color: #1e293b;
+            margin: 40px;
+            background-color: #f8fafc;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            margin-top: 60px;
+            margin-bottom: 20px;
+        }
+
+        .box {
+            padding: 20px;
+            margin-bottom: 25px;
+            border: 1px solid #cbd5e1;
+        }
+
+        .bg-color-name {
+            background-color: red;
+            color: white;
+        }
+
+        .bg-color-hex {
+            background-color: #3498db;
+            color: white;
+        }
+
+        .bg-color-rgb {
+            background-color: rgb(0, 128, 0);
+            color: white;
+        }
+
+        .bg-color-rgba {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+        }
+
+        .bg-color-hsl {
+            background-color: hsl(200, 70%, 50%);
+            color: white;
+        }
+
+        .bg-color-hsla {
+            background-color: hsla(0, 0%, 0%, 0.3);
+            color: #000;
+        }
+
+        .bg-current {
+            color: red;
+            background-color: currentColor;
+        }
+
+        .bg-image {
+            background-image: url("https://biaupload.com/do.php?imgf=org-768cff83d4141.jpeg");
+            color: white;
+            height: 200px;
+        }
+
+        .repeat {
+            background-repeat: repeat;
+        }
+
+        .no-repeat {
+            background-repeat: no-repeat;
+        }
+
+        .position {
+            background-repeat: no-repeat;
+            background-position: center bottom;
+        }
+
+        .size-cover {
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 200px;
+            color: white;
+        }
+
+        .size-contain {
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 200px;
+            color: white;
+        }
+
+        .multi-layer {
+            height: 250px;
+            background-image:
+                linear-gradient(to right, rgba(0, 0, 0, .6), rgba(0, 0, 0, .2)),
+                url("https://biaupload.com/do.php?imgf=org-768cff83d4141.jpeg");
+            background-position: center center;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>آموزش Backgrounds در CSS</h1>
+
+    <h2>background-color</h2>
+
+    <div class="box bg-color-name">
+        background-color با نام رنگ (red)
+        این متن روی پس‌زمینه قرمز نمایش داده می‌شود و کنتراست بالا دارد.
+    </div>
+
+    <div class="box bg-color-hex">
+        background-color با HEX (#3498db)
+        این نوع مقداردهی برای طراحی دقیق و حرفه‌ای بسیار رایج است.
+    </div>
+
+    <div class="box bg-color-rgb">
+        background-color با RGB
+        در این مثال ترکیب رنگ سبز به‌صورت عددی مشخص شده است.
+    </div>
+
+    <div class="box bg-color-rgba">
+        background-color با RGBA
+        این پس‌زمینه نیمه‌شفاف است و رنگ زیرین را کمی نمایش می‌دهد.
+    </div>
+
+    <div class="box bg-color-hsl">
+        background-color با HSL
+        رنگ بر اساس ته‌رنگ، اشباع و روشنایی تعریف شده است.
+    </div>
+
+    <div class="box bg-color-hsla">
+        background-color با HSLA
+        شفافیت باعث می‌شود متن زیرین یا رنگ زمینه دیده شود.
+    </div>
+
+    <div class="box bg-current">
+        background-color: currentColor
+        رنگ پس‌زمینه دقیقاً برابر رنگ متن شده است.
+    </div>
+
+    <h2>background-image</h2>
+
+    <div class="box bg-image repeat">
+        background-image + repeat
+        تصویر پس‌زمینه به‌صورت پیش‌فرض در همه جهات تکرار می‌شود.
+    </div>
+
+    <div class="box bg-image no-repeat">
+        background-image + no-repeat
+        تصویر فقط یک بار نمایش داده می‌شود.
+    </div>
+
+    <h2>background-position</h2>
+
+    <div class="box bg-image position">
+        background-position: center bottom
+        تصویر در مرکز افقی و پایین عنصر قرار گرفته است.
+    </div>
+
+    <h2>background-size</h2>
+
+    <div class="box bg-image size-cover">
+        background-size: cover
+        تصویر کل فضا را پوشانده و ممکن است برش بخورد.
+    </div>
+
+    <div class="box bg-image size-contain">
+        background-size: contain
+        کل تصویر بدون برش داخل عنصر جا می‌گیرد.
+    </div>
+
+    <h2>پس‌زمینه چندلایه (Image + Gradient)</h2>
+
+    <div class="box multi-layer">
+        در این مثال، یک گرادینت تیره روی تصویر قرار گرفته است.
+        این کار باعث افزایش خوانایی متن روی تصویر می‌شود و در طراحی حرفه‌ای
+        صفحات اصلی (Hero Section) بسیار کاربرد دارد.
+    </div>
+
+</body>
+
+</html>
