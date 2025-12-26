@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tooltip خیلی ساده</title>
+
+    <style>
+        a {
+            position: relative;
+            text-decoration: none;
+            color: black;
+            margin-right: 20px;
+        }
+
+        /* tooltip */
+        a::after {
+            content: attr(data-tip);
+            position: absolute;
+            bottom: 120%;
+            left: 0;
+            background: black;
+            color: white;
+            font-size: 12px;
+            padding: 3px 6px;
+            display: none;
+        }
+
+        /* show */
+        a:hover::after {
+            display: block;
+        }
+    </style>
+</head>
+
+<body dir="rtl">
+    <br>
+    <br>
+    <br>
+    <a href="#" data-tip="خانه">Home</a>
+    <a href="#" data-tip="دوره‌ها">Courses</a>
+    <a href="#" data-tip="مقالات">Blog</a>
+
+</body>
+
+</html>
